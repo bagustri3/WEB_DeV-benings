@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WD Benings</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="icon" type="image/x-icon" href="logo.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav class="res-navbar">
+    <img src="logo.png" alt="Logo" class="logo">
+    <h1 class="res-navbar-title">Responsive NavBar</h1>
+    <div class="dropdown">
+      <button class="dropdown-toggle">Menu</button>
+      <ul class="dropdown-menu">
+        <li><a href="#home" id="homeBtn">Home</a></li>
+        <li><a href="#content" id="updateContent">Update Content</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section id="Home">
+      <h2>Web Development Test</h2>
+      <p>Button (Update Content) inside the menu dropdown is to do an update Content, basically every content that load by default is placed on LocalStorage to make it easier while updating the content</p>
+    </section>
+
+    <section class="update-content-page" id="update-content-page">
+      <h2>Update Content</h2>
+      <h3>Manage your content</h3>
+
+      <button id="addContentBtn">+ Add Content</button>
+      <div class="add-content-form" id="add-content-form" style="display: none;">
+        <form id="addContentForm">
+          <label for="label">Label:</label>
+          <input type="text" id="label" name="label" required>
+          <label for="type">Type:</label>
+          <select id="type" name="type" required>
+            <option value="text">Text</option>
+            <option value="email">Email</option>
+            <option value="number">Numeric/Number</option>
+            <option value="textarea">Text Area</option>
+          </select>
+          <label for="required">Required:</label>
+          <input type="checkbox" id="required" name="required">
+          <button type="submit" id="addContentSubmitBtn">Add Content</button>
+        </form>
+      </div>
+      <h3>List of Content</h3>
+      <ul class="content-form-item">
+      </ul>
+    </section>
+
+    <section id="form-section">
+      <h2>Form</h2>
+
+      <form id="form">
+      </form>
+      <p id="formResponse"></p>
+    </section>
+
+    <section id="response">
+      <h2>Response</h2>
+      <div class="carousel-response">
+        <button class="prev-btn">←</button>
+        <ul class="carousel">
+        </ul>
+        <button class="next-btn">→</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <h2>WD Benings - Bagus Tri Prasetyo</h2>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

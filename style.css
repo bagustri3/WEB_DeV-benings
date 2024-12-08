@@ -1,0 +1,295 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #9b9b9b;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+.logo {
+    width: 75px;
+    height: 75px;
+}
+
+.res-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: #ffffff;
+    color: white;
+}
+
+.res-navbar h1 {
+    margin: 0;
+    color: #4d4d4d;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    background: rgb(213, 208, 208);
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dropdown-toggle:hover {
+    background: #a4a5a7;
+    color: white;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-menu li {
+    border-bottom: 1px solid #eee;
+}
+
+.dropdown-menu li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: #333;
+}
+
+.dropdown-menu a:hover {
+    background: #f4f4f9;
+}
+
+.dropdown.active .dropdown-menu {
+    display: block;
+}
+
+main {
+    padding: 1rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 0.5rem 0 0.2rem;
+}
+
+input,
+select,
+textarea {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+#formResponse {
+    text-align: center;
+    color: rgb(81, 82, 81);
+    font-weight: bold;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.carousel-response {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.carousel-response button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    z-index: 10;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.3s ease;
+    width: 100%;
+    padding: 0;
+}
+
+.carousel-item {
+    list-style: none;
+    flex: 0 0 100%;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.update-content-page {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+    h2 {
+        font-size: 24px;
+        color: #333;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+    h3 {
+        font-size: 20px;
+        color: #555;
+        margin-bottom: 10px;
+    }
+}
+
+.content-form-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 800px;
+}
+
+.content-form-item-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    align-items: start;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 20px;
+    max-width: 150px;
+    p {
+        margin: 5px 0;
+        font-size: 14px;
+        line-height: 1.6;
+        color: #333;
+        width: 45%;
+        box-sizing: border-box;
+    }
+}
+
+.delete-button {
+    background-color: red !important;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    align-self: flex-start;
+    transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+    background-color: darkred !important;
+}
+
+@media (max-width: 350px) {
+    .res-navbar {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .dropdown-toggle,
+    .res-navbar-title {
+        margin-top: 1.2rem;
+    }
+
+    .carousel {
+        justify-content: center;
+    }
+
+    .delete-button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .content-form-item-list {
+        grid-template-columns: 1fr;
+    }
+}
+
